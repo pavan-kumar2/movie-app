@@ -15,7 +15,7 @@ getMovies(API_URL)
 async function getMovies(url) {
     const res = await fetch(url)
     const data = await res.json()
-    console.log(data)
+    // console.log(data)
     showMovies(data.results)
 }
 
@@ -58,7 +58,7 @@ form.addEventListener('submit', (e) => {
 
     const searchTerm = search.value;
 
-    
+
     if (searchTerm && searchTerm != '') {
         getMovies(SEARCH_API + searchTerm)
         search.value = ''
